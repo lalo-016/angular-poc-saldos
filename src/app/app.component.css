@@ -1,0 +1,18 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-group-item{
+    background: #B9F0F9;
+}
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+}   
