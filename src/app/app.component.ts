@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConsultaService } from 'src/app/services/consulta.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'angular-poc-saldos';
   balanceAmountData = [];
+
+  constructor( private consultaService: ConsultaService){
+
+  }
   ngOnInit(): void {
+
+    this.consultaService.getItems()
+      .subscribe((data:any) => {
+        console.log(data, 'xD data');
+      });
     this.balanceAmountData = [
       {
         "accountType":"Tarjeta débito",
