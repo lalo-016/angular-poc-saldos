@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsultaService } from 'src/app/services/consulta.service';
+import { ConsultaService } from './services/consulta.service';
 
 @Component({
   selector: 'app-root',
