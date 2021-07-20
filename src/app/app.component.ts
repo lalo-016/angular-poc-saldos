@@ -9,7 +9,7 @@ import { ConsultaService } from './services/consulta.service';
 export class AppComponent implements OnInit {
   title = 'angular-poc-saldos';
   balanceAmountData = [];
-
+  data: any = null;
   constructor( private consultaService: ConsultaService){
 
   }
@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
 
     this.consultaService.getItems()
       .subscribe((data:any) => {
+        this.data = data;
         console.log(data, 'xD data');
+
       });
     this.balanceAmountData = [
       {
